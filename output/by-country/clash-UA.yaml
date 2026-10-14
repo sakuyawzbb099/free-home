@@ -5,12 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇦 UA 01 - xiaohe
-  type: ss
-  server: 185.164.175.81
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  type: vless
+  server: 45.158.185.172
+  port: 443
+  uuid: 49e4b91a-bd15-4e54-9b51-41a3380afb51
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: z5n1.vpnpolar.online
+  network: ws
+  ws-opts:
+    path: /beeline
+    headers:
+      Host: z5n1.vpnpolar.online
 proxy-groups:
 - name: PROXIES
   type: select
